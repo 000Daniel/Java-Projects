@@ -14,7 +14,7 @@ public class TF2_Class_Generator {
 		int temp_Index = (int) (Math.random() * classes.length);
 		
 		int slot = 1;
-		if (((int) (Math.random() * 2) + 1) <= 1) //50/50 chance that the slow would be 1-2 or 1-4.
+		if (((int) (Math.random() * 2) + 1) <= 1) //50/50 chance that the slot would be 1-2 or 1-4.
 		{
 			slot = (int) (Math.random() * 4);
 		}
