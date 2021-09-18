@@ -1,4 +1,4 @@
-This is a random 'Team Fortress 2' class picker, this software has no effect on your game. This is will only output a class name and a loadout slot(1-4)
+This is a random 'Team Fortress 2' class picker, this software has no effect on your game. This software will only output a class name and a loadout slot(1-4)
 
 If you don't know what class to play and what loadout to go with, you can use this software to decide!
 
