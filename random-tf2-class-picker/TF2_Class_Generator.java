@@ -2,7 +2,7 @@ package generator.tf2classes;
 import java.util.Scanner;
 
 public class TF2_Class_Generator {
-	
+			//picks one of the 9 classes
 	static String[] classes = { "Scout", "Soldier", "Pyro", "Demoman", "Heavy", "Engineer", "Medic", "Sniper", "Spy"};
 	static Scanner userInput = new Scanner(System.in);
 	
@@ -27,7 +27,7 @@ public class TF2_Class_Generator {
 		System.out.println("Slot: " + (slot + 1));
 		
 		System.out.print("\nPress enter to continue...");
-		userInput.nextLine();
+		userInput.nextLine();		//pauses before generating a new class
 		func();
 	}
 }
