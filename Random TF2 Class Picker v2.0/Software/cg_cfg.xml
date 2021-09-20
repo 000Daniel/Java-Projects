@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>.\Random TF2 Class Picker.jar</jar>
+  <outfile>.\Random TF2 Class Picker.exe</outfile>
+  <errTitle></errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl>http://java.com/download</downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>false</stayAlive>
+  <restartOnCrash>false</restartOnCrash>
+  <manifest></manifest>
+  <icon>.\icon\class_icon.ico</icon>
+  <jre>
+    <path></path>
+    <bundledJre64Bit>false</bundledJre64Bit>
+    <bundledJreAsFallback>false</bundledJreAsFallback>
+    <minVersion>1</minVersion>
+    <maxVersion></maxVersion>
+    <jdkPreference>preferJre</jdkPreference>
+    <runtimeBits>64/32</runtimeBits>
+  </jre>
+  <versionInfo>
+    <fileVersion>2.0.0.0</fileVersion>
+    <txtFileVersion>1</txtFileVersion>
+    <fileDescription>Picks a random class from TF2</fileDescription>
+    <copyright>https://github.com/000Daniel/</copyright>
+    <productVersion>2.0.0.0</productVersion>
+    <txtProductVersion>1</txtProductVersion>
+    <productName>Random TF2 Class Picker</productName>
+    <companyName>https://github.com/000Daniel/</companyName>
+    <internalName>TF2 Class Picker</internalName>
+    <originalFilename>Random TF2 Class Picker.exe</originalFilename>
+    <trademarks></trademarks>
+    <language>ENGLISH_US</language>
+  </versionInfo>
+</launch4jConfig>
