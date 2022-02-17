@@ -4,12 +4,12 @@ class prime_counter
 {
     public static void main(String[] args)
     {
-                //Prime_Numbers list will contain all future prime numbers
                 //NonPrime_Numbers list will contain all future non-prime numbers
-                //Skip_Numbers list will contain all future non-prime numbers squared(more on this later).
-        List<Long> Prime_Numbers=new ArrayList<Long>();  
+                //Prime_Numbers list will contain all future prime numbers
+                //Skip_Numbers list will contain all future prime numbers squared(more on this later).
+        List<Long> NonPrime_Numbers=new ArrayList<Long>();  
         List<Long> Skip_Numbers=new ArrayList<Long>();
-        List<Long> NonPrime_Numbers=new ArrayList<Long>(); 
+        List<Long> Prime_Numbers=new ArrayList<Long>(); 
 
         System.out.println("Enter a number:");
 
@@ -27,20 +27,20 @@ class prime_counter
         }
         int sqrt_max_val = (int)Math.sqrt(max_value);
 
-                //this saves the current time(more on that later).
+                //this saves the current time(more on this later).
         long startTimer = System.nanoTime();
 
                 //this 'for loop' counts every number from 1 to max_value (i).
                 //foreach of those numbers(i) the software counts again from 1 to that number (y).
                 //it divides the first number(i) by the second number(y) and checks for a remainder.
                 //if the divided number doesn't have a remainder add +1 successNumber.
-                //when the software gets to successNumber=2, add first number(i) to Prime list, and
+                //when the software gets to successNumber=2, add first number(i) to Non-prime list, and
                 //start counting the next number(y).
-                //if successNumber is lower than 2 add that number(i) to Non-prime list.
-                //then square number(i) because: NonPrime * NonPrime = Prime, and add that number,
+                //if successNumber is lower than 2 add that number(i) to Prime list.
+                //then square number(i) because: Prime * Prime = NonPrime, and add that number,
                 //to Skip_Numbers list.
-                //Note: a prime number can be added to Prime_Numbers list if that number doesn't exist
-                //      in Skip_Numbers.
+                //Note: a Non-prime can only be added to NonPrime_Numbers list if that number doesn't
+                //      exist in Skip_Numbers.
         for (int i = 1; i <= max_value; i++)
         {
             byte successNumber = 0;
@@ -57,11 +57,11 @@ class prime_counter
             }
             if (successNumber >= 2 && !Skip_Numbers.contains(i))
             {
-                Prime_Numbers.add((long)i);
+                NonPrime_Numbers.add((long)i);
             }
             else
             {
-                NonPrime_Numbers.add((long)i);
+                Prime_Numbers.add((long)i);
                 //sqrt_max_val makes sure that this 'if statement' won't add a number
                 //higher than max_value.
                 if (i <= sqrt_max_val)
@@ -70,12 +70,11 @@ class prime_counter
                 }
             }
         }
-
-                //this adds the numbers from Skip_Numbers list to the Prime_Numbers list.
-                //Note: this list contains: Non-prime * Non-prime = Prime.
+                //this adds the numbers from Skip_Numbers list to the NonPrime_Numbers list.
+                //Note: this list contains: Prime * Prime = NonPrime.
         for (long i : Skip_Numbers)
         {
-            Prime_Numbers.add(i);
+            NonPrime_Numbers.add(i);
         }
 
                 //this prints all the data.
@@ -85,7 +84,7 @@ class prime_counter
             System.out.print(i + ", ");
         }
 
-        System.out.println("\n" + "\n" + "Non-Prime numbers (till " + max_value + "):");
+        System.out.println("\n" + "\n" + "Composite(Non-Prime) numbers (till " + max_value + "):");
         for (long i : NonPrime_Numbers)
         {
             System.out.print(i + ", ");
@@ -99,3 +98,4 @@ class prime_counter
         System.out.println("Execution time in seconds:"+ (double)(endTimer - startTimer)/1000000000); 
     }
 }
+//created by https://github.com/000Daniel
